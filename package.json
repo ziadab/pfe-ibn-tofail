@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "comp": "hygen component new",
+    "page": "hygen page new"
   },
   "dependencies": {
     "@types/node": "18.15.11",
@@ -21,7 +24,12 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "husky": "^8.0.3",
+    "hygen": "^6.2.11",
+    "lint-staged": "^13.2.0",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1"
+    "prettier": "^2.8.7",
+    "tailwindcss": "^3.3.1",
+    "tsc-files": "^1.1.3"
   }
 }
