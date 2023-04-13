@@ -2,7 +2,7 @@ import { useDisclosure } from "@chakra-ui/react";
 import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import IBN_TOFAIL from "@/assets/logos/ibntofail.png";
+import IBN_TOFAIL from "@/assets/logos/logo";
 import { NavBarDrawer } from "../NavBarDrawer";
 import routing from "../../utils/routing";
 import Image from "next/image";
@@ -18,7 +18,8 @@ export const NavBar = ({}: NavBarProps) => {
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <Link className="block text-teal-600" href="/">
                 <span className="sr-only">Home</span>
-                <Image src={IBN_TOFAIL} alt="logo" height={48} />
+                <IBN_TOFAIL color="#000000" />
+                {/* <Image src={IBN_TOFAIL} alt="logo" height={48} /> */}
               </Link>
             </div>
 

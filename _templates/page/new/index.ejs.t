@@ -1,20 +1,20 @@
 ---
-to: src/pages/<%=Name%>.tsx
-sh: yarn eslint --fix src/pages/<%=Name%>.tsx
+to: src/pages/<%=name%>.tsx
+sh: yarn eslint --fix src/pages/<%=name%>.tsx
 ---
 import type { NextPage } from "next";
 import Head from "next/head";
 
-const <%=Name%> : NextPage = () => {
+const <%=name%> : NextPage = () => {
   return (
   <>
     <Head>
         <title>
-        <%=Name%>
+        <%=name%>
         </title>
     </Head>
   </>
   )
 };
 
-export default <%=Name%>
+export default <%=name%>
