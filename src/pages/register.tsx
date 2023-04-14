@@ -1,6 +1,6 @@
+import { RegisterForm } from "@/components";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 
 const register: NextPage = () => {
   return (
@@ -18,11 +18,8 @@ const register: NextPage = () => {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="w-4/6 h-full overflow-y-scroll p-10 flex flex-col items-center justify-center">
-          <h2 className="text-lg font-normal">Scholar Year 2023/2024</h2>
-          <h1 className="text-4xl tracking-wider uppercase mt-2 font-semibold ">
-            Registeration is <span className="text-primary">OPEN!</span>
-          </h1>
+        <div className="w-4/6 ">
+          <RegisterForm />
         </div>
       </main>
     </>
