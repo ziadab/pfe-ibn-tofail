@@ -20,11 +20,36 @@ export default function Home() {
           alt="img"
           className="object-cover w-full h-full"
         /> */}
-        <h2 className="text-2xl w-1/3 text-center text-primary/90 ">
-          With world-class faculty, groundbreaking research opportunities, and a
-          diverse group of talented students, Ibn Tofail is more than just a
-          place to get an education.
-        </h2>
+
+        <div className="h-[calc(100vh_-_64px)] w-full relative">
+          <img
+            className="w-full h-full object-cover bg-auto bg-no-repeat bg-center bg-gradient-to-t"
+            src="https://www.utoronto.ca/sites/default/files/media/banner/qs-rankings-2023-1.jpg"
+            alt=""
+          />
+          <div className="rounded-t-lg text-white  absolute bottom-0 left-0 z-10 bg-primary -600 w-1/2 h-1/2">
+            <div>
+              <div className="text-2xl md:text-8xl">
+                <span className="text-10xl font-black  text-white-900 dark:text-white">
+                  U
+                </span>
+                niversité
+              </div>
+              <div className="text-2xl md:text-8xl">
+                <span className="text-10xl font-black text-white-900 dark:text-white">
+                  I
+                </span>
+                bn
+              </div>
+              <div className="text-2xl md:text-8xl">
+                <span className="text-10xl font-black text-white-900 dark:text-white">
+                  T
+                </span>
+                ofail
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
