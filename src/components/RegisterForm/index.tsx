@@ -1,11 +1,24 @@
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useMutation } from "react-query";
+import { createUser } from "@/actions/user";
+import { Button } from "@chakra-ui/react";
 
 export const RegisterForm = ({}: RegisterFormProps) => {
-  const { register, handleSubmit, setValue } = useForm<FormData>();
+  const { register, handleSubmit, setValue } = useForm<UserData>();
 
-  const onSubmit: SubmitHandler<FormData> = (data) => console.log(data);
+  const mutation = useMutation(createUser);
+
+  const onSubmit: SubmitHandler<UserData> = (data) => mutation.mutate(data);
+
+  if (mutation.isSuccess) {
+    return (
+      <div className="w-full h-full flex flex-col items-center justify-center">
+        <h3>You&#39;re registeration has been saved</h3>
+      </div>
+    );
+  }
 
   return (
     <form
@@ -152,19 +165,21 @@ export const RegisterForm = ({}: RegisterFormProps) => {
       </div>
 
       <div className="flex w-4/6 justify-between mt-4">
-        <button
+        <Button
           className="w-full bg-primary text-white uppercase rounded-md p-3 font-semibold"
           type="submit"
+          isLoading={mutation.isLoading}
+          bg="#2c1e96"
         >
           Submit
-        </button>
+        </Button>
       </div>
     </form>
   );
 };
 
 export interface RegisterFormProps {}
-interface FormData {
+export interface UserData {
   first_name: string;
   last_name: string;
   phone_number: string;
