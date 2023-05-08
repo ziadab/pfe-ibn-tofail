@@ -26,16 +26,16 @@ export const RegisterForm = ({}: RegisterFormProps) => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h2 className="text-lg font-normal">Scholar Year 2023/2024</h2>
-      <h1 className="text-4xl tracking-wider uppercase mt-2 font-semibold ">
+      <h1 className="text-4xl tracking-wider uppercase mt-2 font-semibold text-center">
         Registeration is <span className="text-primary">OPEN!</span>
       </h1>
 
-      <div className="flex w-4/6 justify-between mt-8">
+      <div className="flex md:w-4/6 justify-between mt-8">
         <label className="w-full mr-4">
           <span className="text-gray-700">First name</span>
           <input
             type="text"
-            className="
+            className=" 
                     mt-1
                     block
                     w-full
@@ -67,7 +67,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
         </label>
       </div>
 
-      <div className="flex w-4/6 justify-between mt-4">
+      <div className="flex md:w-4/6 justify-between mt-4">
         <label className="w-full mr-4">
           <span className="text-gray-700">Your CIN</span>
           <input
@@ -102,7 +102,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
           />
         </label>
       </div>
-      <div className="flex w-4/6 justify-between mt-4">
+      <div className="flex md:w-4/6 w-full justify-between mt-4">
         <label className="w-full">
           <span className="text-gray-700">Email</span>
           <input
@@ -121,7 +121,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
           />
         </label>
       </div>
-      <div className="flex w-4/6 justify-between mt-4">
+      <div className="flex md:w-4/6 w-full justify-between mt-4">
         <label className="w-full">
           <span className="text-gray-700">When you got your BAC?</span>
           <select
@@ -144,7 +144,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
           </select>
         </label>
       </div>
-      <div className="flex w-4/6 justify-between mt-4">
+      <div className="flex md:w-4/6 w-full justify-between mt-4">
         <label className="w-full">
           <span className="text-gray-700">What do you want to study?</span>
           <select
@@ -164,7 +164,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
         </label>
       </div>
 
-      <div className="flex w-4/6 justify-between mt-4">
+      <div className="flex md:w-4/6 w-full justify-between mt-4">
         <Button
           className="w-full bg-primary text-white uppercase rounded-md p-3 font-semibold"
           type="submit"
