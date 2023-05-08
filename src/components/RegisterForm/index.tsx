@@ -7,9 +7,7 @@ import { Button } from "@chakra-ui/react";
 
 export const RegisterForm = ({}: RegisterFormProps) => {
   const { register, handleSubmit, setValue } = useForm<UserData>();
-
   const mutation = useMutation(createUser);
-
   const onSubmit: SubmitHandler<UserData> = (data) => mutation.mutate(data);
 
   if (mutation.isSuccess) {
