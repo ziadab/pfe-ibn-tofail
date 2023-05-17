@@ -1,17 +1,17 @@
+import { fetchMe } from "@/actions/user";
 import type { NextPage } from "next";
-import { useSession } from "next-auth/react";
 import Head from "next/head";
+import { useQuery } from "react-query";
 
 const Me: NextPage = () => {
-  const { data, update, status } = useSession();
-  console.log("data: ", data);
+  const { isSuccess, data } = useQuery("me", fetchMe);
   return (
     <>
       <Head>
         <title>Me</title>
       </Head>
       <div>
-        <h1>Me</h1>
+        <h1>{isSuccess && JSON.stringify(data)}</h1>
       </div>
     </>
   );
