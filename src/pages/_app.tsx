@@ -3,6 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import { Lato } from "next/font/google";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { SessionProvider } from "next-auth/react";
 
 const montserrat = Lato({
   subsets: ["latin"],
@@ -13,14 +14,19 @@ const montserrat = Lato({
 
 const queryClient = new QueryClient();
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppProps) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ChakraProvider>
-        <main className={`${montserrat.variable} font-sans`}>
-          <Component {...pageProps} />
-        </main>
-      </ChakraProvider>
-    </QueryClientProvider>
+    <SessionProvider session={session}>
+      <QueryClientProvider client={queryClient}>
+        <ChakraProvider>
+          <main className={`${montserrat.variable} font-sans`}>
+            <Component {...pageProps} />
+          </main>
+        </ChakraProvider>
+      </QueryClientProvider>
+    </SessionProvider>
   );
 }

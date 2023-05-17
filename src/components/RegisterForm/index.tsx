@@ -100,8 +100,8 @@ export const RegisterForm = ({}: RegisterFormProps) => {
           />
         </label>
       </div>
-      <div className="flex md:w-4/6 w-full justify-between mt-4">
-        <label className="w-full">
+      <div className="flex md:w-4/6 w-full justify-between mt-4 ">
+        <label className="w-full mr-4">
           <span className="text-gray-700">Email</span>
           <input
             {...register("email", { required: true })}
@@ -118,7 +118,27 @@ export const RegisterForm = ({}: RegisterFormProps) => {
             placeholder=""
           />
         </label>
+        <label className="w-full">
+          <span className="text-gray-700">Password</span>
+          <input
+            {...register("password", { required: true })}
+            type="password"
+            className="
+                    mt-1
+                    block
+                    w-full
+                    rounded-md
+                    border-gray-300
+                    shadow-sm
+                    focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+                  "
+            placeholder=""
+          />
+        </label>
       </div>
+      {/* <div className="flex md:w-4/6 w-full justify-between mt-4">
+        
+      </div> */}
       <div className="flex md:w-4/6 w-full justify-between mt-4">
         <label className="w-full">
           <span className="text-gray-700">When you got your BAC?</span>
@@ -184,5 +204,6 @@ export interface UserData {
   cin: string;
   bac: number;
   email: string;
+  password: string;
   what_to_study: string;
 }

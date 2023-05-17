@@ -19,6 +19,11 @@ const ROUTING = [
     name: "Register",
     isButton: true,
   },
+  {
+    path: "/login",
+    name: "Login",
+    isButton: true,
+  },
 ];
 
 export default ROUTING;

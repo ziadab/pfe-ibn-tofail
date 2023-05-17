@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import IBN_TOFAIL from "@/assets/logos/logo";
 import { NavBarDrawer } from "../NavBarDrawer";
 import routing from "../../utils/routing";
-import Image from "next/image";
 
 export const NavBar = ({}: NavBarProps) => {
   const router = useRouter();
