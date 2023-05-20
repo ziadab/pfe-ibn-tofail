@@ -1,12 +1,12 @@
 const ROUTING = [
   {
     path: "/",
-    name: "Home",
+    name: "Accueil",
     isButton: false,
   },
   {
     path: "/program/undergraduate",
-    name: "Undergraduate",
+    name: "Licence",
     isButton: false,
   },
   {
@@ -16,12 +16,12 @@ const ROUTING = [
   },
   {
     path: "/register",
-    name: "Register",
+    name: "Authentication",
     isButton: true,
   },
   {
     path: "/login",
-    name: "Login",
+    name: "Connexion",
     isButton: true,
   },
 ];

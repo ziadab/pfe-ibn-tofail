@@ -13,7 +13,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
   if (mutation.isSuccess) {
     return (
       <div className="w-full h-full flex flex-col items-center justify-center">
-        <h3>You&#39;re registeration has been saved</h3>
+        <h3>l&#39;inscription a été enregistrée</h3>
       </div>
     );
   }
@@ -23,14 +23,14 @@ export const RegisterForm = ({}: RegisterFormProps) => {
       className="w-full h-full overflow-y-scroll p-10 flex flex-col items-center justify-center"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <h2 className="text-lg font-normal">Scholar Year 2023/2024</h2>
+      <h2 className="text-lg font-normal">Année scolaire 2023/2024</h2>
       <h1 className="text-4xl tracking-wider uppercase mt-2 font-semibold text-center">
-        Registeration is <span className="text-primary">OPEN!</span>
+        INSCRIPTION EST <span className="text-primary"> OUVERTE !!</span>
       </h1>
 
       <div className="flex md:w-4/6 justify-between mt-8">
         <label className="w-full mr-4">
-          <span className="text-gray-700">First name</span>
+          <span className="text-gray-700">Prenom</span>
           <input
             type="text"
             className=" 
@@ -47,7 +47,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
           />
         </label>
         <label className="w-full">
-          <span className="text-gray-700">Last name</span>
+          <span className="text-gray-700">Nom</span>
           <input
             type="text"
             className="
@@ -67,7 +67,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
 
       <div className="flex md:w-4/6 justify-between mt-4">
         <label className="w-full mr-4">
-          <span className="text-gray-700">Your CIN</span>
+          <span className="text-gray-700">CIN</span>
           <input
             type="text"
             className="
@@ -84,7 +84,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
           />
         </label>
         <label className="w-full">
-          <span className="text-gray-700">Phone number </span>
+          <span className="text-gray-700">Numéro de téléphone</span>
           <PhoneInput
             containerStyle={{
               marginTop: "0.25rem",
@@ -119,7 +119,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
           />
         </label>
         <label className="w-full">
-          <span className="text-gray-700">Password</span>
+          <span className="text-gray-700">Mot de passe</span>
           <input
             {...register("password", { required: true })}
             type="password"
@@ -141,7 +141,9 @@ export const RegisterForm = ({}: RegisterFormProps) => {
       </div> */}
       <div className="flex md:w-4/6 w-full justify-between mt-4">
         <label className="w-full">
-          <span className="text-gray-700">When you got your BAC?</span>
+          <span className="text-gray-700">
+            Quand avez-vous obtenu votre BAC ?
+          </span>
           <select
             {...register("bac", { required: true })}
             className="block
@@ -164,7 +166,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
       </div>
       <div className="flex md:w-4/6 w-full justify-between mt-4">
         <label className="w-full">
-          <span className="text-gray-700">What do you want to study?</span>
+          <span className="text-gray-700">Que veux-tu étudier ?</span>
           <select
             {...register("what_to_study", { required: true })}
             className="block
@@ -175,9 +177,9 @@ export const RegisterForm = ({}: RegisterFormProps) => {
                     shadow-sm
                     focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
           >
-            <option value="LP">Licence professionnelle</option>
-            <option value="MP1">Master professionnelle 1</option>
-            <option value="MP2">Master professionnelle 2</option>
+            <option value="LP">Licence </option>
+
+            <option value="MP2">Master </option>
           </select>
         </label>
       </div>
@@ -189,7 +191,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
           isLoading={mutation.isLoading}
           bg="#2c1e96"
         >
-          Submit
+          Enregistrer
         </Button>
       </div>
     </form>
