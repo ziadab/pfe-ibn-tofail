@@ -7,7 +7,7 @@ const Undergraduate: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Undergraduate</title>
+        <title>Master</title>
       </Head>
       <div>
         <NavBar />
