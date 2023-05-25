@@ -204,7 +204,7 @@ export interface UserData {
   last_name: string;
   phone_number: string;
   cin: string;
-  bac: number;
+  bac: string;
   email: string;
   password: string;
   what_to_study: string;
