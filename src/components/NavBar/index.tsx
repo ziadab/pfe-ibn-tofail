@@ -5,10 +5,14 @@ import { useRouter } from "next/router";
 import IBN_TOFAIL from "@/assets/logos/logo";
 import { NavBarDrawer } from "../NavBarDrawer";
 import routing from "../../utils/routing";
+import { useSession } from "next-auth/react";
 
 export const NavBar = ({}: NavBarProps) => {
   const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { status } = useSession();
+  console.log(status);
+
   return (
     <>
       <header aria-label="Site Header" className="bg-white z-50 sticky top-0">
@@ -26,6 +30,11 @@ export const NavBar = ({}: NavBarProps) => {
               <nav aria-label="Site Nav" className="hidden md:block">
                 <ul className="flex items-center gap-6 text-sm">
                   {routing.map((route) => {
+                    if (
+                      ["/register", "/login"].includes(route.path) &&
+                      status == "authenticated"
+                    )
+                      return null;
                     return (
                       <li key={route.name}>
                         <Link

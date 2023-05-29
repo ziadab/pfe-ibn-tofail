@@ -4,18 +4,17 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useMutation } from "react-query";
 import { createUser } from "@/actions/user";
 import { Button } from "@chakra-ui/react";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/router";
 
 export const RegisterForm = ({}: RegisterFormProps) => {
   const { register, handleSubmit, setValue } = useForm<UserData>();
   const mutation = useMutation(createUser);
   const onSubmit: SubmitHandler<UserData> = (data) => mutation.mutate(data);
+  const router = useRouter();
 
   if (mutation.isSuccess) {
-    return (
-      <div className="w-full h-full flex flex-col items-center justify-center">
-        <h3>l&#39;inscription a été enregistrée</h3>
-      </div>
-    );
+    router.replace("/login");
   }
 
   return (
@@ -154,15 +153,13 @@ export const RegisterForm = ({}: RegisterFormProps) => {
                     shadow-sm
                     focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
           >
-            <option value="2023">2023</option>
-            <option value="2022">2022</option>
-            <option value="2021">2021</option>
-            <option value="2020">2020</option>
-            <option value="2019">2019</option>
-            <option value="2018">2018 </option>
-            <option value="2017">2017 </option>
-            <option value="2016">2016 </option>
-            <option value="2015">2015 </option>
+            {[...Array(12)].map((_, i) => {
+              return (
+                <option key={i} value={2022 - i}>
+                  {2022 - i}
+                </option>
+              );
+            })}
           </select>
         </label>
       </div>
@@ -180,6 +177,7 @@ export const RegisterForm = ({}: RegisterFormProps) => {
                     focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
           >
             <option value="LP">Licence </option>
+
             <option value="MP2">Master </option>
           </select>
         </label>
@@ -205,7 +203,7 @@ export interface UserData {
   last_name: string;
   phone_number: string;
   cin: string;
-  bac: string;
+  bac: number;
   email: string;
   password: string;
   what_to_study: string;

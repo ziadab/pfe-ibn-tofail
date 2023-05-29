@@ -21,7 +21,7 @@ const Login: NextPage = () => {
       redirect: false,
       ...data,
     });
-    if (ok) router.replace("/me");
+    if (ok) router.replace("/");
   };
 
   return (
