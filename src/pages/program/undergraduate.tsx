@@ -8,10 +8,14 @@ import {
   TabPanels,
   Tab,
   TabPanel,
-  TabIndicator,
+  Spinner,
 } from "@chakra-ui/react";
+import { useQuery } from "react-query";
+import { Program, getPrograms } from "@/actions/programs";
 
 const Undergraduate: NextPage = () => {
+  const result = useQuery({ queryKey: ["programs"], queryFn: getPrograms });
+
   return (
     <>
       <Head>
@@ -36,32 +40,21 @@ const Undergraduate: NextPage = () => {
 
             <TabPanels>
               <TabPanel>
-                <LicenseTab>
-                  <ProgramCards
-                    title="Heeeey"
-                    imgLink="https://images.unsplash.com/photo-1685549925654-e86dcebdd21a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=581&q=80"
-                  />
-                  <ProgramCards
-                    title="Heeeey"
-                    imgLink="https://images.unsplash.com/photo-1685549925654-e86dcebdd21a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=581&q=80"
-                  />
-                  <ProgramCards
-                    title="Heeeey"
-                    imgLink="https://images.unsplash.com/photo-1685549925654-e86dcebdd21a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=581&q=80"
-                  />
-                  <ProgramCards
-                    title="Heeeey"
-                    imgLink="https://images.unsplash.com/photo-1685549925654-e86dcebdd21a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=581&q=80"
-                  />
-                  <ProgramCards
-                    title="Heeeey"
-                    imgLink="https://images.unsplash.com/photo-1685549925654-e86dcebdd21a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=581&q=80"
-                  />
-                  <ProgramCards
-                    title="Heeeey"
-                    imgLink="https://images.unsplash.com/photo-1685549925654-e86dcebdd21a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=581&q=80"
-                  />
-                </LicenseTab>
+                {result.isLoading ? <Spinner /> : null}
+                {result.isSuccess ? (
+                  <LicenseTab>
+                    {result.data.data.map((program: Program) => {
+                      return (
+                        <ProgramCards
+                          key={program.id}
+                          id={program.id}
+                          imgLink={program.img_link}
+                          title={program.title}
+                        />
+                      );
+                    })}
+                  </LicenseTab>
+                ) : null}
               </TabPanel>
               <TabPanel>
                 <p>two!</p>
