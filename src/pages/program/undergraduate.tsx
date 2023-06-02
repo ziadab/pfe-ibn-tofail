@@ -57,13 +57,55 @@ const Undergraduate: NextPage = () => {
                 ) : null}
               </TabPanel>
               <TabPanel>
-                <p>two!</p>
+                {result.isLoading ? <Spinner /> : null}
+                {result.isSuccess ? (
+                  <LicenseTab>
+                    {result.data.data.map((program: Program) => {
+                      return (
+                        <ProgramCards
+                          key={program.id}
+                          id={program.id}
+                          imgLink={program.img_link}
+                          title={program.title}
+                        />
+                      );
+                    })}
+                  </LicenseTab>
+                ) : null}
               </TabPanel>
               <TabPanel>
-                <p>three!</p>
+                {result.isLoading ? <Spinner /> : null}
+                {result.isSuccess ? (
+                  <LicenseTab>
+                    {result.data.data.map((program: Program) => {
+                      return (
+                        <ProgramCards
+                          key={program.id}
+                          id={program.id}
+                          imgLink={program.img_link}
+                          title={program.title}
+                        />
+                      );
+                    })}
+                  </LicenseTab>
+                ) : null}
               </TabPanel>
               <TabPanel>
-                <p>FOUR!!!</p>
+                {result.isLoading ? <Spinner /> : null}
+                {result.isSuccess ? (
+                  <LicenseTab>
+                    {result.data.data.map((program: Program) => {
+                      return (
+                        <ProgramCards
+                          key={program.id}
+                          id={program.id}
+                          imgLink={program.img_link}
+                          title={program.title}
+                        />
+                      );
+                    })}
+                  </LicenseTab>
+                ) : null}
               </TabPanel>
             </TabPanels>
           </Tabs>
