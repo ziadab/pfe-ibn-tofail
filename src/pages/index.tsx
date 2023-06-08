@@ -170,27 +170,6 @@ export default function Home() {
                 <div className="row-span-3 bg-gray-950 shadow rounded-lg text-white">
                   <div className="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
                     <span>Etablissements</span>
-                    <button
-                      type="button"
-                      className="inline-flex justify-center rounded-md px-1 -mr-1 bg-white text-sm leading-5 font-medium text-gray-500 hover:text-gray-600"
-                      id="options-menu"
-                      aria-haspopup="true"
-                      aria-expanded="true"
-                    >
-                      Centres
-                      <svg
-                        className="-mr-1 ml-1 h-5 w-5"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                    </button>
                   </div>
                   <div className="overflow-y-auto">
                     <ul className="p-6 space-y-6">
@@ -199,17 +178,11 @@ export default function Home() {
                         <span className="text-white">
                           Faculté des Langues des Lettres et des Arts
                         </span>
-                        <span className="ml-auto font-semibold">
-                          Centre de Développ
-                        </span>
                       </li>
                       <li className="flex items-center">
                         <div className="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden"></div>
                         <span className="text-white">
                           Faculté des Sciences Humaines et Sociales
-                        </span>
-                        <span className="ml-auto font-semibold">
-                          Centre de Langues
                         </span>
                       </li>
                       <li className="flex items-center">
@@ -217,18 +190,12 @@ export default function Home() {
                         <span className="text-white">
                           Faculté d’Economie et de Gestion
                         </span>
-                        <span className="ml-auto font-semibold">
-                          Centre Sportif
-                        </span>
                       </li>
 
                       <li className="flex items-center">
                         <div className="h-10 w-10 mr-3 bg-gray-100 rounded-full overflow-hidden"></div>
                         <span className="text-white">
                           Institut des Métiers de Sport
-                        </span>
-                        <span className="ml-auto font-semibold">
-                          Théatre Universitaire
                         </span>
                       </li>
                     </ul>
