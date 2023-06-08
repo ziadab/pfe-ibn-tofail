@@ -21,7 +21,7 @@ const Me: NextPage = () => {
   return (
     <>
       <Head>
-        <title>thla</title>
+        <title>{result.data?.data.title}</title>
       </Head>
       <NavBar />
       <Container>
