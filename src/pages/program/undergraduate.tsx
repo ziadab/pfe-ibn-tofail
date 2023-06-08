@@ -12,9 +12,15 @@ import {
 } from "@chakra-ui/react";
 import { useQuery } from "react-query";
 import { Program, getPrograms } from "@/actions/programs";
+import { useState } from "react";
 
 const Undergraduate: NextPage = () => {
-  const result = useQuery({ queryKey: ["programs"], queryFn: getPrograms });
+  const [tabIndex, setTabIndex] = useState<number>(0);
+
+  const result = useQuery({
+    queryKey: ["programs", tabIndex],
+    queryFn: () => getPrograms("license", tabIndex),
+  });
 
   return (
     <>
@@ -30,7 +36,11 @@ const Undergraduate: NextPage = () => {
               Licences Universitaires Professionnelles
             </h1>
           </div>
-          <Tabs className="mt-8" position="relative">
+          <Tabs
+            className="mt-8"
+            position="relative"
+            onChange={(index) => setTabIndex(index)}
+          >
             <TabList className="justify-center">
               <Tab>Faculté Economie et de Gestion</Tab>
               <Tab>Faculté des sciences</Tab>

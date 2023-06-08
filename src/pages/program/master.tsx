@@ -10,11 +10,17 @@ import {
 } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useState } from "react";
 import { SlGraduation } from "react-icons/sl";
 import { useQuery } from "react-query";
 
 const Undergraduate: NextPage = () => {
-  const result = useQuery({ queryKey: ["programs"], queryFn: getPrograms });
+  const [tabIndex, setTabIndex] = useState<number>(0);
+
+  const result = useQuery({
+    queryKey: ["programs", tabIndex],
+    queryFn: () => getPrograms("master", tabIndex),
+  });
 
   return (
     <>
@@ -28,7 +34,11 @@ const Undergraduate: NextPage = () => {
             <SlGraduation size={38} />
             <h1 className="font-sans text-3xl ml-4">Master Professionnelles</h1>
           </div>
-          <Tabs className="mt-8" position="relative">
+          <Tabs
+            className="mt-8"
+            position="relative"
+            onChange={(index) => setTabIndex(index)}
+          >
             <TabList className="justify-center">
               <Tab>Faculté Economie et de Gestion</Tab>
               <Tab>Faculté des sciences</Tab>
