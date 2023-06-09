@@ -25,7 +25,7 @@ export default function Home() {
           <div className="flex-grow text-gray-800">
             <main className="p-6 sm:p-10 space-y-6">
               <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-                <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
+                <div className="flex items-center p-8 bg-primary shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white-600 text-white rounded-full mr-6">
                     <svg
                       aria-hidden="true"
@@ -66,7 +66,7 @@ export default function Home() {
                     <span className="text-white block ">Etudiants</span>
                   </div>
                 </div>
-                <div className="bg-blue-950 flex items-center p-8 text-primary shadow rounded-lg">
+                <div className="bg-primary flex items-center p-8 text-primary shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white-600 text-white rounded-full mr-6">
                     <svg
                       aria-hidden="true"
@@ -98,7 +98,7 @@ export default function Home() {
                     <span className="text-white block 0C2F9C">Enseignants</span>
                   </div>
                 </div>
-                <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
+                <div className="flex items-center p-8 bg-primary shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white-600 text-white rounded-full mr-6">
                     <svg
                       aria-hidden="true"
@@ -131,7 +131,7 @@ export default function Home() {
                     <span className="text-white block">Administratifs</span>
                   </div>
                 </div>
-                <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
+                <div className="flex items-center p-8 bg-primary shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white-600 text-white rounded-full mr-6">
                     <svg
                       aria-hidden="true"
@@ -165,7 +165,10 @@ export default function Home() {
                 </div>
               </section>
               <section className="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6">
-                <div className="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow rounded-lg"></div>
+                {/* <div className="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow rounded-lg">
+                L'université Ibn Tofaïl est une université publique marocaine située à Kénitra. Elle a plus de 85.000 étudiants, 620 enseignants et 11 établissements. 
+                Elle est classée 94ᵉ dans le classement régional 2016 des universités arabes.
+                </div> */}
 
                 <div className="row-span-3 bg-gray-950 shadow rounded-lg text-white">
                   <div className="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
@@ -202,14 +205,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col row-span-3 bg-white shadow rounded-lg">
-                  <div className="p-4 flex-grow">
+                  <div className="p-2 flex-grow">
                     <img
                       src="https://fs.uit.ac.ma/wp-content/uploads/2022/05/nvlle-administration-scaled.jpg"
                       alt=""
                     />
                   </div>
                 </div>
-                <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
+                <div className=" h-16 flex items-center p-8 bg-primary shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white rounded-full mr-6">
                     <svg
                       aria-hidden="true"
@@ -240,7 +243,7 @@ export default function Home() {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
+                <div className="h-16 flex items-center p-8 bg-primary shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white rounded-full mr-6">
                     <svg
                       aria-hidden="true"
