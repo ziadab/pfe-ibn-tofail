@@ -160,7 +160,9 @@ export default function Home() {
                   </div>
                 </div>
               </section>
-              <section className="grid md:grid-cols-2  xl:grid-flow-col gap-6">
+              <section className="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6">
+                <div className="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow rounded-lg"></div>
+
                 <div className="row-span-3 bg-gray-950 shadow rounded-lg text-white">
                   <div className="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
                     <span>Etablissements</span>
@@ -193,6 +195,14 @@ export default function Home() {
                         </span>
                       </li>
                     </ul>
+                  </div>
+                  <div className="flex flex-col row-span-3 bg-white shadow rounded-lg">
+                    <div className="p-4 flex-grow">
+                      <img
+                        src="https://fs.uit.ac.ma/wp-content/uploads/2022/05/nvlle-administration-scaled.jpg"
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
