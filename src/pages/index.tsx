@@ -28,7 +28,6 @@ export default function Home() {
                 <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white-600 text-white rounded-full mr-6">
                     <svg
-                      aria-hidden="true"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -38,7 +37,7 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="w-6 h-6"
                       >
@@ -46,7 +45,7 @@ export default function Home() {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           className="w-6 h-6"
                         >
@@ -69,7 +68,6 @@ export default function Home() {
                 <div className="bg-blue-950 flex items-center p-8 text-primary shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white-600 text-white rounded-full mr-6">
                     <svg
-                      aria-hidden="true"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -79,7 +77,7 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="w-6 h-6"
                       >
@@ -101,7 +99,6 @@ export default function Home() {
                 <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white-600 text-white rounded-full mr-6">
                     <svg
-                      aria-hidden="true"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -111,7 +108,7 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="w-6 h-6"
                       >
@@ -134,7 +131,6 @@ export default function Home() {
                 <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white-600 text-white rounded-full mr-6">
                     <svg
-                      aria-hidden="true"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -144,7 +140,7 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="w-6 h-6"
                       >
@@ -164,9 +160,7 @@ export default function Home() {
                   </div>
                 </div>
               </section>
-              <section className="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6">
-                <div className="flex flex-col md:col-span-2 md:row-span-2 bg-white shadow rounded-lg"></div>
-
+              <section className="grid md:grid-cols-2  xl:grid-flow-col gap-6">
                 <div className="row-span-3 bg-gray-950 shadow rounded-lg text-white">
                   <div className="flex items-center justify-between px-6 py-5 font-semibold border-b border-gray-100">
                     <span>Etablissements</span>
@@ -201,18 +195,9 @@ export default function Home() {
                     </ul>
                   </div>
                 </div>
-                <div className="flex flex-col row-span-3 bg-white shadow rounded-lg">
-                  <div className="p-4 flex-grow">
-                    <img
-                      src="https://fs.uit.ac.ma/wp-content/uploads/2022/05/nvlle-administration-scaled.jpg"
-                      alt=""
-                    />
-                  </div>
-                </div>
                 <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white rounded-full mr-6">
                     <svg
-                      aria-hidden="true"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -222,7 +207,7 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="w-6 h-6"
                       >
@@ -243,7 +228,6 @@ export default function Home() {
                 <div className="flex items-center p-8 bg-blue-950 shadow rounded-lg">
                   <div className="inline-flex flex-shrink-0 items-center justify-center h-16 w-16 text-white rounded-full mr-6">
                     <svg
-                      aria-hidden="true"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -253,7 +237,7 @@ export default function Home() {
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         className="w-6 h-6"
                       >
