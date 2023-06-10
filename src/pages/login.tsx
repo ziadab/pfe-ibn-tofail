@@ -50,7 +50,7 @@ const Login: NextPage = () => {
               </Link>
 
               <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                Welcome Back
+                Content de te revoir
               </h1>
 
               <form
@@ -73,7 +73,7 @@ const Login: NextPage = () => {
 
                 <div className="col-span-6">
                   <label className="block text-sm font-medium text-gray-700">
-                    Password
+                    Mot de passe
                   </label>
 
                   <input
@@ -87,13 +87,13 @@ const Login: NextPage = () => {
 
                 <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
                   <button className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:outline-none focus:ring active:text-blue-500">
-                    Login
+                    Connexion
                   </button>
 
                   <p className="mt-4 text-sm text-gray-500 sm:mt-0">
-                    Don&apos;t have an account?{" "}
+                    Je n&apos;ai pas de compte?{" "}
                     <Link href="/register" className="text-gray-700 underline">
-                      Register
+                      s&apos;authentifier
                     </Link>
                     .
                   </p>
