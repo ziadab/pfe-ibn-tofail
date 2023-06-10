@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import IBN_TOFAIL from "@/assets/logos/logo";
 import { NavBarDrawer } from "../NavBarDrawer";
 import routing from "../../utils/routing";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 export const NavBar = ({}: NavBarProps) => {
   const router = useRouter();
@@ -35,6 +35,7 @@ export const NavBar = ({}: NavBarProps) => {
                       status == "authenticated"
                     )
                       return null;
+
                     return (
                       <li key={route.name}>
                         <Link
@@ -52,6 +53,14 @@ export const NavBar = ({}: NavBarProps) => {
                       </li>
                     );
                   })}
+                  {status == "authenticated" ? (
+                    <button
+                      className="text-gray-500 transition hover:text-primary text-base"
+                      onClick={() => signOut()}
+                    >
+                      Deconnecter
+                    </button>
+                  ) : null}
                 </ul>
               </nav>
 
